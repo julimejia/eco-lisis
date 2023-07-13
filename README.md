@@ -1,2 +1,2 @@
 # eco-lisis
-Proyecti ecolisis pagina web django
+Proyecto ecolisis pagina web django
