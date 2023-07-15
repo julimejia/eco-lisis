@@ -116,17 +116,17 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'bibliotecario/static'),
+    os.path.join(BASE_DIR, 'eco_lisis/static'),
 ]
 
 
 # Media files (Uploaded Images)
 MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'bibliotecario/media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'eco_lisis/media')
 
 # Fonts
 FONTS_URL = '/fonts/'
-FONTS_ROOT = os.path.join(BASE_DIR, 'bibliotecario/fonts')
+FONTS_ROOT = os.path.join(BASE_DIR, 'eco_lisis/fonts')
 
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
