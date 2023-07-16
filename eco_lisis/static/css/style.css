@@ -202,7 +202,7 @@ display-flex, .display-flex, .display-flex-center {
     width: 300px;
     height: 300px;
     display: inline-block;
-    background-image: url("C:\Users\david\OneDrive\Escritorio\eco-lisis\eco_lisis\eco_lisis\media");
+    background-image: url("/media/imagenes/1.png");
     background-size: contain;
     background-size: 65%;
     background-position: center;
@@ -216,7 +216,7 @@ display-flex, .display-flex, .display-flex-center {
     width: 300px;
     height: 300px;
     display: inline-block;
-    background-image: url("C:\Users\david\OneDrive\Escritorio\eco-lisis\eco_lisis\eco_lisis\media");
+    background-image: url("/media/imagenes/2.png");
     background-size: contain;
     background-size: 65%;
     background-position: center;
