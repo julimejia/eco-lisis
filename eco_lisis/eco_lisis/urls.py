@@ -25,3 +25,7 @@ urlpatterns = [
     path('', views.login),
     path('menu/', views.inicio)
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.FONTS_URL, document_root=settings.FONTS_ROOT)

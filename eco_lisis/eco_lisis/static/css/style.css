@@ -174,7 +174,6 @@ display-flex, .display-flex, .display-flex-center {
     color: #222;
     font-weight: 400;
     font-family: 'Montserrat';
-    background-image: url('/media/imagenes/bibliotecafondo.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     -moz-background-size: cover;
@@ -202,7 +201,7 @@ display-flex, .display-flex, .display-flex-center {
     width: 300px;
     height: 300px;
     display: inline-block;
-    background-image: url("C:\Users\david\OneDrive\Escritorio\eco-lisis\eco_lisis\eco_lisis\media");
+    background-image: url("/media/images/1.png");
     background-size: contain;
     background-size: 65%;
     background-position: center;
@@ -216,7 +215,7 @@ display-flex, .display-flex, .display-flex-center {
     width: 300px;
     height: 300px;
     display: inline-block;
-    background-image: url("C:\Users\david\OneDrive\Escritorio\eco-lisis\eco_lisis\eco_lisis\media");
+    background-image: url("/media/images/1.png");
     background-size: contain;
     background-size: 65%;
     background-position: center;
