@@ -23,7 +23,8 @@ from django.urls import path
 
 urlpatterns = [
     path('', views.login),
-    path('menu/', views.inicio)
+    path('menu/', views.inicio),
+    path('reclamar/', views.reclamar)
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 if settings.DEBUG:

@@ -1,30 +1,39 @@
 import serial
-
-
-import serial
 import time
 
-# Configuración del puerto serial
-port = '/dev/ttyACM0'  # Reemplaza '/dev/ttyACM0' con el puerto correspondiente a tu Arduino
-baudrate = 9600
+def superLectura():
+    def read_rfid():
+        ser = serial.Serial('COM8', 9600)
+        time.sleep(2)  # Espera 2 segundos para establecer la conexión
 
-# Conexión al puerto serial
-ser = serial.Serial(port, baudrate)
-time.sleep(2)  # Espera 2 segundos para establecer la conexión
+        data = b''  # Usa un objeto de bytes en lugar de un string
+        while True:
+            try:
+                if ser.inWaiting() > 0:
+                    char = ser.read()  # Lee un byte (objeto bytes)
+                    if char == b'\r':
+                        rfid_data = data.decode('utf-8')  # Decodifica data para obtener el ID de la tarjeta
+                        ser.close()  # Cierre de la conexión serial
+                        return rfid_data
+                    else:
+                        data += char  # Concatena char directamente (objeto bytes)
 
-def read_rfid():
-    data = ''
-    while True:
-        if ser.inWaiting() > 0:
-            char = ser.read().decode('utf-8')
-            if char == '\r':
-                return data
-            else:
-                data += char
+            except serial.SerialException as e:
+                print("Error de comunicación serial:", e)
+                break
 
-# Ciclo principal
-while True:
-    rfid_data = read_rfid()
-    print("RFID leído: ", rfid_data)
+        ser.close()
+        return None  # Retorna None si no se ha leído ninguna tarjeta RFID
 
-ser.close()
+    # Uso de la función para obtener el ID de la tarjeta RFID
+    try:
+        while True:
+            rfid_id = read_rfid()
+            if rfid_id:
+                print("RFID leído:", rfid_id)
+                return rfid_id
+    except KeyboardInterrupt:
+        pass
+
+# Llamada al método superLectura
+superLectura()
